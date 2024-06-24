@@ -166,7 +166,9 @@
                                         <img src="{{asset('img/'.$product->image)}}" alt="Product Image">
                                     </div>
                                     <div class="product-content">
-                                        <h2>{{$product->name}}</h2>
+                                        <h2>
+                                            <a href="{{route('single_product',['id' => $product->id])}}"> {{$product->name}}</a>
+                                        </h2>
                                         @if ($product->sale_price != '')
                                         <h3>${{$product->sale_price}}</h3><br>
                                         <h3 style="text-decoration: line-through">${{$product->price}}</h3>
